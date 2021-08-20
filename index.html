@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 <body>
-  <header>
-    <div>
-      <img src="./images/logo.svg" alt="logo sunnyside">
+  <header class="header">
+    <div class="header-nav">
+      <div>
+        <img src="./images/logo.svg" alt="logo sunnyside">
+      </div>
+      <nav>
+        <ul>
+          <li><a>About</a></li>
+          <li><a>Services</a></li>
+          <li><a>Projects</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a>About</a></li>
-        <li><a>Services</a></li>
-        <li><a>Projects</a></li>
-        <li><a>Contact</a></li>
-      </ul>
-    </nav>
-    <div>
-      <h1>We are creatives</h1>
-    </div>
+    <h1 class="header-title">We are creatives</h1>
   </header>
 
   <main>
-    <section>
-      <div>
+    <section class="container-services">
+      <div class="services-box services-box-text">
         <h2>Transform your brand</h2>
         <p>We are a full-service creative agency specializing in helping brands grow fast. 
           Engage your clients through compelling visuals that do most of the marketing for you.</p>
@@ -36,49 +36,49 @@
       </div>  
       <img src="./images/desktop/image-transform.jpg" alt="">
       <img src="./images/desktop/image-stand-out.jpg" alt="">
-      <div>
+      <div  class="services-box services-box-text">
         <h2>Stand out to the right audience</h2>
         <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
         <a href="">Learn more</a>
       </div> 
-      <div>
+      <div class="services-box overlay-box">
         <img src="./images/desktop/image-graphic-design.jpg" alt="">
-        <div>
+        <div class="overlay-text">
           <h3>Graphic design</h3>
           <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
         </div>
       </div> 
-      <div>
+      <div class="services-box overlay-box">
         <img src="./images/desktop/image-photography.jpg" alt="">
-        <div>
+        <div  class="overlay-text">
           <h3>Photography</h3>
           <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
         </div>
       </div> 
     </section>
 
-    <section>
-      <h3>Client testimonials</h3>
-      <div>
-        <div>
+    <section class="section-clients">
+      <h3 class="clients-title">Client testimonials</h3>
+      <div class="container-clients">
+        <div class="clients-box">
           <div>
-            <img src="./images/image-emily.jpg" alt="">
+            <img class="container-img-clients img-responsive" src="./images/image-emily.jpg" alt="">
           </div>
           <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <h5>Emily R.</h5>
+          <h4>Emily R.</h4>
           <p>Marketing Director</p>
         </div>
-        <div>
+        <div class="clients-box">
           <div>
-            <img src="./images/image-thomas.jpg" alt="">
+            <img class="container-img-clients img-responsive" src="./images/image-thomas.jpg" alt="">
           </div>
           <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
           <h5>Thomas S.</h5>
           <p>Chief Operating Officer</p>
         </div>
-        <div>
+        <div class="clients-box">
           <div>
-            <img src="./images/image-jennie.jpg" alt="">
+            <img class="container-img-clients img-responsive" src="./images/image-jennie.jpg" alt="">
           </div>
           <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
           <h5>Jennie F.</h5>
@@ -87,18 +87,18 @@
       </div>
     </section>
 
-    <section>
-      <div>
-        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="">
+    <section class="section-gallery">
+      <div class="gallery-img">
+        <img class="img-responsive" src="./images/desktop/image-gallery-milkbottles.jpg" alt="">
       </div>
-      <div>
-        <img src="./images/desktop/image-gallery-orange.jpg" alt="">
+      <div class="gallery-img">
+        <img class="img-responsive" src="./images/desktop/image-gallery-orange.jpg" alt="">
       </div>
-      <div>
-        <img src="./images/desktop/image-gallery-cone.jpg" alt="">
+      <div class="gallery-img">
+        <img class="img-responsive"  src="./images/desktop/image-gallery-cone.jpg" alt="">
       </div>
-      <div>
-        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="">
+      <div  class="gallery-img">
+        <img class="img-responsive"  src="./images/desktop/image-gallery-sugarcubes.jpg" alt="">
       </div>
     </section>
   </main>  
@@ -114,7 +114,7 @@
         <li><a href="">Projects</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="footer-social">
       <div>
         <img src="./images/icon-facebook.svg" alt="">
       </div>
