@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
-
+@import "./base.css";
 
 :root {
     --primary-color-soft-red: hsl(7, 99%, 70%);
@@ -20,7 +20,7 @@
     --typography-secondary: 'Fraunces';
 }
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -30,16 +30,19 @@ body {
     background-color: var(--neutral-color-white);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-
 .img-responsive {
     max-width: 100%;
+    height: auto;
     width: 100%;
-    vertical-align: auto;
-    height: 100%;
+    vertical-align: middle;
+}
+
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
 }
 
 
@@ -56,33 +59,16 @@ header {
 }
 
 .header-nav {
+    height: 80px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.header-nav > nav > ul {
-    display: flex;
-}
-
-.header-nav > nav > ul > li {
-    list-style: none;
-}
-
-.header-nav > nav > ul > li > a {
-    text-decoration: none;
-    color: var(--neutral-color-white);
-    font-family: var(--typography-primary);
-    padding: 20px;
-    margin: 0 5px;
-}
-
-.header-nav > nav > ul > li:last-child > a{
-    background-color: var(--neutral-color-white);
-    color: black;
-    text-transform: uppercase;
-    border-radius: 80px;
-    padding: 20px 30px;
+.header-nav > nav {
+    display: none;
 }
 
 .header-container-title {
@@ -97,12 +83,49 @@ header {
     justify-content: center;
     align-items: center;
     height: 180px;
+    padding: 50px 20px 30px 20px;
     font-family: var(--typography-secondary);
-    font-size: 2.9rem;
+    font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
     word-spacing: .7rem;
     letter-spacing: 1rem;
+    margin-right: -1rem;
+}
+
+.hb-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    z-index: 9999;
+    margin: 20px;
+    border-top: 30px #3dbeff solid;
+    border-right: 20px white solid;
+}
+
+.hb-nav > nav {
+    background-color: white;
+    padding: 10px 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hb-nav > nav > a {
+    color: var(--neutral-color-dark-grayish-blue);
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    font-family: var(--typography-primary);
+    text-transform: uppercase;
+}
+
+.hb-nav > nav > a:last-child {
+    background-color: var(--primary-color-yellow);
+    text-transform: uppercase;
+    border-radius: 80px;
+    padding: 20px 25px;
 }
 
 /* MAIN STYLES  */ 
@@ -117,14 +140,15 @@ main {
 }
 
 .services-box {
-    width: 50%;
+    width: 100%;
 }
 
 .services-box-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8em;
+    min-height: 400px;
+    padding: 2rem;
 }
 
 .services-box > h2 {
@@ -167,37 +191,37 @@ main {
 }
 
 .overlay-box {
-    position: relative;    
+    position: relative;  
+    display: flex;
+    justify-content: center;
 }
 
 .overlay-text {
     position: absolute;
-    bottom: 4em;
-    left: 25%;
+    bottom: 0;
     text-align: center;
-    width: 50%;
+    padding: 20px;
 }
 
 .overlay-text > h3 {
     font-family: var(--typography-secondary);
-    font-size: 1.4em;
     color: var(--primary-color-dark-desatured-cyan);
-    margin: 1.2em 0;
+    margin-bottom: 1rem;
 }
 
 .overlay-text > p {
     font-family: var(--typography-primary);
     color: var(--neutral-color-dark-grayish-blue);
-    line-height: 1.7rem;
+    line-height: 1rem;
 }
 
 
 /* CLIENTS STYLES */
 .container-clients {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 520px;
 }
 
 .clients-box {
@@ -205,12 +229,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 380px;
+    width: 100%;
+    margin: 2rem 0;
 }
 
 .clients-title {
     text-align: center;
-    margin-top: 8rem;
+    margin: 4rem 0 2rem 0;
     font-family: var(--typography-secondary);
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -227,7 +252,7 @@ main {
     color: var(--neutral-color-dark-grayish-blue);
     font-family: var(--typography-primary);
     text-align: center;
-    margin: 3rem 2rem;
+    margin: 1.5rem 2rem;
 }
 
 .clients-box > h4 {
@@ -246,10 +271,11 @@ main {
 /* GALLERY STYLES */
 .section-gallery {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery-img {
-    width: 25%;
+    width: 50%;
 }
 
 /* FOOTER STYLES */
@@ -290,4 +316,100 @@ footer > nav > ul > li > a{
 
 .footer-social-icon {
     margin: 10px 20px;
+}
+
+.attribution {
+    padding: 20px;
+    text-align: center;
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (min-width: 770px) {
+    .overlay-text {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding: 80px;
+        width: 50%;
+    }       
+}
+
+@media screen and (min-width: 1440px) {
+    .header-title {
+        font-size: 3rem;
+        margin: 2rem;
+    }
+    
+    .header-nav > nav {
+        display: block;
+    }
+
+    .header-nav > nav > ul {
+        display: flex;
+    }
+    
+    .header-nav > nav > ul > li {
+        list-style: none;
+    }
+    
+    .header-nav > nav > ul > li > a {
+        text-decoration: none;
+        color: var(--neutral-color-white);
+        font-family: var(--typography-primary);
+        padding: 20px;
+        margin: 0 5px;
+    }
+    
+    .header-nav > nav > ul > li:last-child > a{
+        background-color: var(--neutral-color-white);
+        color: black;
+        text-transform: uppercase;
+        border-radius: 80px;
+        padding: 20px 30px;
+    }
+
+    .header-nav-hamburguer {
+        display: none;
+    }
+
+    .container-services {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .services-box {
+        width: 50%;
+    }
+
+    .services-box-text {
+        width: 50%;
+    }
+
+    .overlay-text {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding: 80px;
+        width: 50%;
+    }       
+
+    .clients-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        margin: 5rem 0;
+    }
+    
+    .gallery-img {
+        width: 25%;
+    }   
+    
 }
